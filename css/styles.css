@@ -1,0 +1,272 @@
+body{
+    background-color: ghostwhite;
+}
+.todo{
+	width: auto;
+	height: auto;
+	display: table;
+    margin: 50px auto auto auto ;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.h1{
+    text-align: center;
+    font-size: 60px;
+    color: cadetblue;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+
+.container{
+     display: grid;
+     background-color: white;
+     box-shadow: 2px 2px 10px #666; 
+     grid-template-columns: 70px 500px;
+     grid-template-rows: auto auto auto;
+     justify-content: center;
+  
+}
+
+.header{
+     display: grid;
+     border-bottom: solid .5px;
+     border-bottom-color: lightgray;
+     grid-template-columns: 70px 500px;
+     grid-column:  1 / 3;
+     background-color: white;
+
+}
+
+.new-todo{
+    grid-column:  2 / 3;
+    grid-row: 1/ 2; 
+    font-size: 20px;
+    width: auto;
+    height: auto;
+    border: 0px;
+    margin-bottom: 1px;
+    padding: 15px 50px 15px 15px ;
+    align-items: center;
+    opacity: 0.8;
+
+}
+.new-todo:focus{
+	outline:none ;
+    outline-width: 0;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.button{   
+    grid-column:  1 / 2;
+    grid-row: 1/ 2;
+    margin: auto;
+    align-self: center;
+    padding:  auto;
+    width: 35px;
+    height: 20px;
+    border: 0px;
+    outline:none;
+    background-image:url(flecha.png);
+    background-size: 100% 100%; 
+    background-color: white;
+    background-repeat:no-repeat;
+    background-position:center;
+    opacity: 0.33;
+    
+}
+.button.click{
+    outline:none ;
+    outline-width: 0;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 0px;
+} 
+
+.todo-list{
+  justify-self: center;  
+  grid-column:  1 / 3;
+  grid-row: 2 / 3;  
+  align-self: center;
+  display: grid;
+  justify-content: space-between; 
+  grid-template-columns: 50px 500px;
+  grid-template-rows: auto;
+
+  
+}
+
+
+.list{
+    align-self: center;
+    justify-self: start;
+    grid-column:  1 / 3;
+    display: grid;
+    grid-template-columns: 50px 400px 50px;
+    grid-template-rows: auto;
+    height: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    list-style:none;
+    
+ 
+}
+
+.check{
+    justify-self: start;
+    align-self: center;
+    grid-column:  1 / 2;
+   
+  
+  
+}
+.element{
+    justify-self: start;
+    opacity: 0.8;
+    align-self: center;
+    grid-column:  2 / 3;
+  
+  
+}
+
+.delete{
+    justify-self: end;
+    align-self: center;
+    grid-column:  3 / 4;
+    border: 0px;
+    background: white;
+    color: darkred; 
+    opacity: 0.6;
+}
+
+.delete:focus{
+    opacity: 1;
+    outline:none ;
+    outline-width: 0;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 0px;
+} 
+.delete:hover{
+    
+    opacity: 1;
+    
+} 
+
+.footer{
+   
+  display: grid;  
+  grid-template-columns: auto auto auto auto 150px;
+  grid-template-rows: auto;
+  grid-column-gap: 10px;
+  justify-content: space-between;
+  align-items: center; 
+  grid-column:  1 / 3;
+  grid-row: 3 / 4;  
+  border-top: solid .5px;
+  border-top-color: lightgray; 
+  opacity: 0.7;
+  font-family: 'Times New Roman', Times, serif;
+  
+
+}   
+
+.items{
+    grid-row: 1 / 2;
+    justify-self: start;
+    align-self: center;
+    opacity: 0.5;
+    margin: 15px;
+}
+.all{
+    border: 0px;
+    background: white;
+    grid-column:  2 / 3;
+    grid-row: 1 / 2;
+    grid-template-rows: auto;
+    justify-self: end;
+    padding: 5px;
+       
+}
+.all:hover{
+
+     box-shadow: 2px 2px 10px #666; 
+}
+
+.active{
+    border: 0px;
+    background: white;
+    grid-column:  3 / 4;
+    grid-row: 1 / 2;
+    grid-template-rows: auto;
+    padding: 5px;
+       
+}
+.active:hover{
+
+     box-shadow: 2px 2px 10px #666; 
+}
+
+.completed{
+     border: 0px;
+    background: white;
+    grid-column:  4 / 5;
+    grid-row: 1 / 2;
+    grid-template-rows: auto;
+    justify-self: start;
+    padding: 5px;      
+}
+.completed:hover{
+
+     box-shadow: 2px 2px 10px #666; 
+}
+
+.clear{
+    border: 0px;
+    background: white;
+    grid-column:  5 / 6;
+    grid-row: 1/2;
+    justify-self: end;
+    align-self: center;
+    margin: 10px;
+    padding: 5px;
+}
+.clear:hover{
+
+     box-shadow: 2px 2px 10px #666; 
+}
+
+input[type=checkbox].css-checkbox {
+							position:absolute; z-index:-1000; left:-1000px; overflow: hidden; clip: rect(0 0 0 0); height:1px; width:1px; margin:-1px; padding:0; border:0;
+						}
+
+						input[type=checkbox].css-checkbox + label.css-label {
+							padding-left:30px;
+							height:30px; 
+							display:inline-block;
+							line-height:30px;
+							background-repeat:no-repeat;
+							background-position: 0 0;
+							font-size:30px;
+							vertical-align:middle;
+							cursor:pointer;
+
+						}
+
+						input[type=checkbox].css-checkbox:checked + label.css-label {
+							background-position: 0 -30px;
+						}
+						label.css-label {
+				background-image:url(http://csscheckbox.com/checkboxes/u/csscheckbox_f60067e68146be412873f96f1d2458cd.png);
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
